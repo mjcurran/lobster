@@ -21,8 +21,9 @@ if [ -z "$BUILD_CCTOOLS" ]; then
 fi
 
 (
+	mkdir -p $VIRTUAL_ENV/src
 	cd $VIRTUAL_ENV/src
-	wget -O - http://ccl.cse.nd.edu/software/files/cctools-lobster-167-0e914feb-cvmfs-70dfa0d6-source.tar.gz|tar xzf -
+	wget -O - http://ccl.cse.nd.edu/software/files/cctools-lobster-171-cd5e3e2c-cvmfs-70dfa0d6-source.tar.gz|tar xzf -
 	cd cctools*
 	sed -i 's/\(config_perl_path\)=auto/\1=no/' ./configure
 	./configure --prefix $VIRTUAL_ENV
