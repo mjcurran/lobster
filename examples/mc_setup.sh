@@ -7,10 +7,10 @@ cd mc_gen
 
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 
-curl -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIWinter15wmLHE-00196 > setup01_lhe.sh
-curl -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIISummer15GS-00177 > setup02_gs.sh
-curl -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIFall15DR76-00243 > setup03_dr.sh
-curl -k https://cms-pdmv.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIFall15MiniAODv2-00224 > setup04_v4.sh
+curl -k https://cms-pdmv-prod.web.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIWinter15wmLHE-00196 > setup01_lhe.sh
+curl -k https://cms-pdmv-prod.web.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIISummer15GS-00177 > setup02_gs.sh
+curl -k https://cms-pdmv-prod.web.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIFall15DR76-00243 > setup03_dr.sh
+curl -k https://cms-pdmv-prod.web.cern.ch/mcm/public/restapi/requests/get_setup/HIG-RunIIFall15MiniAODv2-00224 > setup04_v4.sh
 
 sed -i 's@/afs/.*@/cvmfs/cms.cern.ch/cmsset_default.sh@g' setup*.sh
 sed -i 's@export X509.*@@' setup*.sh
